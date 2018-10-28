@@ -1,0 +1,22 @@
+<ng-template ngFor let-entry [ngForOf]="_entries">
+    <mat-checkbox [value]="entry.value" [checked]="isSelected(entry)" [indeterminate]="isIndeterminate(entry)" (change)="onParentChange($event)"
+      [color]="entry.color" [disabled]="entry.disabled" [labelPosition]="labelPosition">
+      <span class="label">{{entry.label}}</span>
+      <ng-container *ngIf="entry.description">
+        <br /><span class="description">{{entry.description}}</span>
+      </ng-container>
+    </mat-checkbox>
+  
+    <div *ngIf="entry.hasChildren()" class="children">
+      <ng-template ngFor let-child [ngForOf]="entry.children">
+        <mat-checkbox [value]="child.value" [checked]="child.selected" (change)="onChildChange($event,entry.value)"
+          [color]="child.color" [disabled]="child.disabled" [labelPosition]="labelPosition" [ngClass]="{'label-before': labelPosition=='before'}">
+          <span class="label">{{child.label}}</span>
+          <ng-container *ngIf="child.description">
+            <br /><span class="description">{{child.description}}</span>
+          </ng-container>
+        </mat-checkbox>
+      </ng-template>
+    </div>
+  
+  </ng-template>

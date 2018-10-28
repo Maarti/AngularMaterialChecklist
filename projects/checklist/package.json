@@ -1,8 +1,40 @@
 {
-  "name": "checklist",
+  "name": "@maarti/mat-checklist",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
-  }
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/animations": "^7.0.1",
+    "@angular/cdk": "^7.0.2",
+    "@angular/material": "^7.0.2"
+  },
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan MARTINET",
+  "license": "ISC",
+  "description": "<mat-checklist> brings together several checkboxes from @angular/material to make a checklist. This also allows checkboxes nesting.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maarti/AngularMaterialChecklist.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "checkbox",
+    "nested",
+    "checklist",
+    "material",
+    "design",
+    "components",
+    "sublist",
+    "subcheckbox",
+    "parent",
+    "children"
+  ],
+  "bugs": {
+    "url": "https://github.com/Maarti/AngularMaterialChecklist/issues"
+  },
+  "homepage": "https://github.com/Maarti/AngularMaterialChecklist#readme"
 }
