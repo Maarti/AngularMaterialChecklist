@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "checklist": [
+        "dist/checklist"
+      ],
+      "checklist/*": [
+        "dist/checklist/*"
+      ]
+    }
   }
 }

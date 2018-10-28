@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "checklist": {
+      "root": "projects/checklist",
+      "sourceRoot": "projects/checklist/src",
+      "projectType": "library",
+      "prefix": "mat",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/checklist/tsconfig.lib.json",
+            "project": "projects/checklist/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/checklist/src/test.ts",
+            "tsConfig": "projects/checklist/tsconfig.spec.json",
+            "karmaConfig": "projects/checklist/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/checklist/tsconfig.lib.json",
+              "projects/checklist/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "checklist-demo"

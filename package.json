@@ -1,6 +1,6 @@
 {
-  "name": "checklist-demo",
-  "version": "0.0.0",
+  "name": "@maarti/checklist-demo",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
+    "@angular-devkit/build-ng-packagr": "~0.8.0",
     "@angular/cli": "~6.2.2",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
@@ -40,9 +41,35 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^4.1.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": ">=0.29.0",
+    "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maarti/AngularMaterialChecklist.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "checkbox",
+    "nested",
+    "checklist",
+    "sublist",
+    "subcheckbox",
+    "parent",
+    "children"
+  ],
+  "author": "Bryan MARTINET",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maarti/AngularMaterialChecklist/issues"
+  },
+  "homepage": "https://github.com/Maarti/AngularMaterialChecklist#readme"
 }
