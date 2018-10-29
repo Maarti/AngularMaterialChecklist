@@ -2,7 +2,7 @@
 
 `mat-checklist` brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
 
-![Mat Checklist Demo](./docs/mat-checklist-demo.gif)
+![Mat Checklist Demo](https://raw.githubusercontent.com/Maarti/AngularMaterialChecklist/master/docs/mat-checklist-demo.gif)
 
 ## Getting started
 
@@ -83,4 +83,4 @@ See also the list of [contributors](https://github.com/Maarti/AngularMaterialChe
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Maarti/AngularMaterialChecklist/blob/master/LICENSE.md) file for details

@@ -1,6 +1,6 @@
 {
   "name": "@maarti/mat-checklist",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bryan MARTINET",
-  "license": "ISC",
+  "license": "MIT",
   "description": "<mat-checklist> brings together several checkboxes from @angular/material to make a checklist. This also allows checkboxes nesting.",
   "repository": {
     "type": "git",
