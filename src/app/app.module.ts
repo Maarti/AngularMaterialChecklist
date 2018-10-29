@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { ChecklistModule } from 'checklist';
 
 const routes: Routes = [
-  { path: 'checklist', component: AppComponent },
-  { path: '**', redirectTo: '/checklist', }
+  { path: 'demo', component: AppComponent },
+  { path: '**', redirectTo: '/demo', }
 ];
 
 @NgModule({

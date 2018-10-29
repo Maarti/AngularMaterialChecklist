@@ -1,47 +1,46 @@
 :host {
-    width: 100%;
-  }
-  
-  :host ::ng-deep .mat-checkbox-label {
-    line-height: initial;
-  }
-  
-  .label {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .description {
-    font-size: 14px;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  mat-checkbox {
-    width: 100%;
-    display: flex;
-  }
-  
-  mat-checkbox ::ng-deep .mat-checkbox-layout {
-    width: 100%;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-  
-  /* Target children checkboxes when labelPosition="before" */
-  mat-checkbox.label-before ::ng-deep .mat-checkbox-layout {
-    padding-left: 36px;
-  }
-  
-  mat-checkbox ::ng-deep .mat-checkbox-inner-container {
-    margin-left: 12px;
-  }
-  
-  .children mat-checkbox ::ng-deep .mat-checkbox-inner-container {
-    margin-left: 36px;
-  }
-  
-  mat-checkbox:hover {
-    background-color: rgba(128, 128, 128, 0.1);
-  }
-  
+  width: 100%;
+}
+
+:host ::ng-deep .mat-checkbox-label {
+  line-height: initial;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+mat-checkbox {
+  width: 100%;
+  display: flex;
+}
+
+mat-checkbox ::ng-deep .mat-checkbox-layout {
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Target children checkboxes when labelPosition="before" */
+mat-checkbox.label-before ::ng-deep .mat-checkbox-layout {
+  padding-left: 36px;
+}
+
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  margin-left: 12px;
+}
+
+.children mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  margin-left: 36px;
+}
+
+mat-checkbox:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}

@@ -9,21 +9,18 @@
 ### Installing
 
 1. **Install Mat-Checklist and its dependencies**
-
   ```
   npm install --save @angular/material @angular/cdk @angular/animations @maarti/mat-checklist
   ```
 2. **Include a theme**
-
+  
   In your `/src/styles.css` file, include one of Angular Material's prebuilt themes:
   ```css
   @import "~@angular/material/prebuilt-themes/indigo-pink.css";
   ```
   If you are not using the Angular CLI, you can include a prebuilt theme via a `<link>` element in your `index.html`.
   For more information on theming and instructions on how to create a custom theme, see the [theming guide](https://material.angular.io/guide/theming).
-
 3. **Import the component modules:**
-
   ```typescript
   import { ChecklistModule } from '@maarti/mat-checklist';
    // ...
@@ -53,7 +50,7 @@ public entries: ChecklistEntry[] = [
     new ChecklistEntry('orange', 'Orange', false),
   ])];
 ```
-For more examples, see the [live demo](https://github.com/Maarti/AngularMaterialChecklist).
+For more examples, see the [live demo](https://maarti.github.io/AngularMaterialChecklist/checklist).
 
 ## Running unit tests
 

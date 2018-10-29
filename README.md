@@ -53,7 +53,7 @@ public entries: ChecklistEntry[] = [
     new ChecklistEntry('orange', 'Orange', false),
   ])];
 ```
-For more examples, see the [live demo](https://github.com/Maarti/AngularMaterialChecklist).
+For more examples, see the [live demo](https://maarti.github.io/AngularMaterialChecklist/checklist).
 
 ## Running unit tests
 

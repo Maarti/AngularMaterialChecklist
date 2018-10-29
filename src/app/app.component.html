@@ -1,29 +1,36 @@
-<h1>Checklist example:</h1>
-<mat-checklist [entries]="entries" #checklist></mat-checklist>
-<br />
-Checklist Values: <br />
-<textarea rows="18">{{checklist.getValue() | json}}</textarea>
-<br /><br />
-<hr>
+<div class="main-container">
+  <div class="container">
+    <div class="main-title">
+      <h1>Angular Material Checklist</h1>
+    </div>
+    <h2>Checklist example:</h2>
+    <mat-checklist [entries]="entries" #checklist></mat-checklist>
+    <br />
+    Checklist Values: <br />
+    <textarea rows="18">{{checklist.getValue() | json}}</textarea>
+    <br /><br />
+    <hr>
 
 
-<h1>Checklist with labelPosition="before":</h1>
-<mat-checklist [entries]="entries2" labelPosition="before" #checklist_before></mat-checklist>
-<br />
-Checklist Values: <br />
-<textarea rows="8">{{checklist_before.getValue() | json}}</textarea>
-<br /><br />
-<hr>
+    <h1>Checklist with labelPosition="before":</h1>
+    <mat-checklist [entries]="entries2" labelPosition="before" #checklist_before></mat-checklist>
+    <br />
+    Checklist Values: <br />
+    <textarea rows="8">{{checklist_before.getValue() | json}}</textarea>
+    <br /><br />
+    <hr>
 
 
-<h1>Initializers:</h1>
-Constructor:<br/>
-<textarea rows="1">new ChecklistEntry('id', 'MyBox', true)</textarea>
-<br/>
-<br/>
-Init with js object:<br/>
-<textarea rows="1">ChecklistEntry.init({ 'value': 'id', 'label': 'MyBox' })</textarea>
-<br/>
-<br/>
-Init with .set() chaining:<br/>
-<textarea rows="1">new ChecklistEntry('id').set('label', 'MyBox').set('checked', true).set('color', 'warn')</textarea>
+    <h1>Initializers:</h1>
+    Constructor:<br />
+    <textarea rows="1">new ChecklistEntry('id', 'MyBox', true)</textarea>
+    <br />
+    <br />
+    Init with js object:<br />
+    <textarea rows="1">ChecklistEntry.init({ 'value': 'id', 'label': 'MyBox' })</textarea>
+    <br />
+    <br />
+    Init with .set() chaining:<br />
+    <textarea rows="1">new ChecklistEntry('id').set('label', 'MyBox').set('checked', true).set('color', 'warn')</textarea>
+  </div>
+</div>
