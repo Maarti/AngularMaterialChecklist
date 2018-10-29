@@ -390,7 +390,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  font-family: \"Roboto\", sans-serif;\n}\n\n.main-title {\n  text-align: center;\n}\n\ntextarea {\n  width: 100%;\n  background-color: #262626;\n  color: #e6ede8;\n  font-family: \"Operator Mono SSm A\", \"Operator Mono SSm B\", \"Source Code Pro\",\n    Menlo, Consolas, Monaco, monospace;\n}\n"
+module.exports = ":host {\n  font-family: \"Roboto\", sans-serif;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.container {\n  flex-basis: 70%;\n}\n\n.main-title {\n  text-align: center;\n}\n\ntextarea {\n  width: 100%;\n  background-color: #262626;\n  color: #e6ede8;\n  font-family: \"Operator Mono SSm A\", \"Operator Mono SSm B\", \"Source Code Pro\",\n    Menlo, Consolas, Monaco, monospace;\n}\n"
 
 /***/ }),
 
@@ -401,7 +401,7 @@ module.exports = ":host {\n  font-family: \"Roboto\", sans-serif;\n}\n\n.main-ti
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"main-title\">\n    <h1>Angular Material Checklist</h1>\n  </div>\n  <h2>Checklist example:</h2>\n  <mat-checklist [entries]=\"entries\" #checklist></mat-checklist>\n  <br />\n  Checklist Values: <br />\n  <textarea rows=\"18\">{{checklist.getValue() | json}}</textarea>\n  <br /><br />\n  <hr>\n\n\n  <h1>Checklist with labelPosition=\"before\":</h1>\n  <mat-checklist [entries]=\"entries2\" labelPosition=\"before\" #checklist_before></mat-checklist>\n  <br />\n  Checklist Values: <br />\n  <textarea rows=\"8\">{{checklist_before.getValue() | json}}</textarea>\n  <br /><br />\n  <hr>\n\n\n  <h1>Initializers:</h1>\n  Constructor:<br />\n  <textarea rows=\"1\">new ChecklistEntry('id', 'MyBox', true)</textarea>\n  <br />\n  <br />\n  Init with js object:<br />\n  <textarea rows=\"1\">ChecklistEntry.init({ 'value': 'id', 'label': 'MyBox' })</textarea>\n  <br />\n  <br />\n  Init with .set() chaining:<br />\n  <textarea rows=\"1\">new ChecklistEntry('id').set('label', 'MyBox').set('checked', true).set('color', 'warn')</textarea>\n</div>"
+module.exports = "<div class=\"main-container\">\n  <div class=\"container\">\n    <div class=\"main-title\">\n      <h1>Angular Material Checklist</h1>\n    </div>\n    <h2>Checklist example:</h2>\n    <mat-checklist [entries]=\"entries\" #checklist></mat-checklist>\n    <br />\n    Checklist Values: <br />\n    <textarea rows=\"18\">{{checklist.getValue() | json}}</textarea>\n    <br /><br />\n    <hr>\n\n\n    <h1>Checklist with labelPosition=\"before\":</h1>\n    <mat-checklist [entries]=\"entries2\" labelPosition=\"before\" #checklist_before></mat-checklist>\n    <br />\n    Checklist Values: <br />\n    <textarea rows=\"8\">{{checklist_before.getValue() | json}}</textarea>\n    <br /><br />\n    <hr>\n\n\n    <h1>Initializers:</h1>\n    Constructor:<br />\n    <textarea rows=\"1\">new ChecklistEntry('id', 'MyBox', true)</textarea>\n    <br />\n    <br />\n    Init with js object:<br />\n    <textarea rows=\"1\">ChecklistEntry.init({ 'value': 'id', 'label': 'MyBox' })</textarea>\n    <br />\n    <br />\n    Init with .set() chaining:<br />\n    <textarea rows=\"1\">new ChecklistEntry('id').set('label', 'MyBox').set('checked', true).set('color', 'warn')</textarea>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -497,8 +497,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: 'checklist', component: _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"] },
-    { path: '**', redirectTo: '/checklist', }
+    { path: 'demo', component: _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"] },
+    { path: '**', redirectTo: '/demo', }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
