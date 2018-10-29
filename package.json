@@ -51,7 +51,7 @@
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
   },
-  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.",
+  "description": "<mat-checklist> brings together several checkboxes from @angular/material to make a checklist. This also allows checkboxes nesting.",
   "main": "index.js",
   "repository": {
     "type": "git",
