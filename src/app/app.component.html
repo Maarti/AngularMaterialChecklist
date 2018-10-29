@@ -2,9 +2,7 @@
 <mat-checklist [entries]="entries" #checklist></mat-checklist>
 <br />
 Checklist Values: <br />
-<textarea rows="15">
-{{checklist.getValue() | json}}
-</textarea>
+<textarea rows="18">{{checklist.getValue() | json}}</textarea>
 <br /><br />
 <hr>
 
@@ -13,21 +11,19 @@ Checklist Values: <br />
 <mat-checklist [entries]="entries2" labelPosition="before" #checklist_before></mat-checklist>
 <br />
 Checklist Values: <br />
-<textarea rows="8">
-{{checklist_before.getValue() | json}}
-</textarea>
+<textarea rows="8">{{checklist_before.getValue() | json}}</textarea>
 <br /><br />
 <hr>
 
 
 <h1>Initializers:</h1>
 Constructor:<br/>
-<textarea rows="1">new ChecklistEntry('coverage_0', 'Accidental coverage', true)</textarea>
+<textarea rows="1">new ChecklistEntry('id', 'MyBox', true)</textarea>
 <br/>
 <br/>
 Init with js object:<br/>
-<textarea rows="1">ChecklistEntry.init({ 'value': 'testcheckbox_normal', 'label': 'Normal box' })</textarea>
+<textarea rows="1">ChecklistEntry.init({ 'value': 'id', 'label': 'MyBox' })</textarea>
 <br/>
 <br/>
 Init with .set() chaining:<br/>
-<textarea rows="1">new ChecklistEntry('testcheckbox_warn').set('label', 'Warn box').set('selected', true).set('color', 'warn')</textarea>
+<textarea rows="1">new ChecklistEntry('id').set('label', 'MyBox').set('selected', true).set('color', 'warn')</textarea>

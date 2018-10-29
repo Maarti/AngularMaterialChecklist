@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { MatCheckboxChange, MAT_CHECKBOX_CLICK_ACTION } from '@angular/material';
+import { MatCheckboxChange, MAT_CHECKBOX_CLICK_ACTION, MatCheckbox } from '@angular/material';
 import { ChecklistEntry } from './checklist-entry';
 
 @Component({
@@ -72,9 +72,10 @@ export class ChecklistComponent implements OnInit {
     return valueEntries;
   }
 
-  public onChildChange(change: MatCheckboxChange, parent: string): void {
-    this._entries.find(list => list.value === parent).children
-      .find(entry => entry.value === change.source.value).selected = change.checked;
+  public onChildChange(change: MatCheckboxChange, parent: MatCheckbox): void {
+    this._entries.find(list => list.value === parent.value).children.
+      find(entry => entry.value === change.source.value).selected = change.checked;
+    parent.checked = change.checked;
   }
 
   /** On parent change, we change all children accordingly (except for disabled children) */
