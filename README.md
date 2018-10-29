@@ -1,11 +1,12 @@
 # Angular Material Checklist
 
 `mat-checklist` brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
+
 ![Mat Checklist Demo](./docs/mat-checklist-demo.gif)
 
 ### Installing
 
-`npm install @maarti/mat-checklist"`
+`npm install @maarti/mat-checklist`
 
 ## Running unit tests
 

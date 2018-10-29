@@ -27,7 +27,7 @@ export class AppComponent {
       ChecklistEntry.init({ 'value': 'checkbox_normal', 'label': 'Normal box' }),
       new ChecklistEntry('checkbox_disabled', 'MC Hammer box', false, undefined, 'U Can\'t Touch This', true),
       // example of init with .set() chaining
-      new ChecklistEntry('checkbox_warn').set('label', 'Warn box').set('selected', true).set('color', 'warn'),
+      new ChecklistEntry('checkbox_warn').set('label', 'Warn box').set('checked', true).set('color', 'warn'),
       new ChecklistEntry('checkbox_accent', 'Accent box', true, undefined, 'Fancy', false, 'accent'),
     ]),
   ];

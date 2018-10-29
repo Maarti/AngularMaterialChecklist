@@ -1,5 +1,5 @@
 <ng-template ngFor let-entry [ngForOf]="_entries">
-  <mat-checkbox #parentCB [value]="entry.value" [checked]="isSelected(entry)" [indeterminate]="isIndeterminate(entry)"
+  <mat-checkbox #parentCB [value]="entry.value" [checked]="isChecked(entry)" [indeterminate]="isIndeterminate(entry)"
     (change)="onParentChange($event)" [color]="entry.color" [disabled]="entry.disabled" [labelPosition]="labelPosition">
     <span class="label">{{entry.label}}</span>
     <ng-container *ngIf="entry.description">
@@ -9,7 +9,7 @@
 
   <div *ngIf="entry.hasChildren()" class="children">
     <ng-template ngFor let-child [ngForOf]="entry.children">
-      <mat-checkbox [value]="child.value" [checked]="child.selected" (change)="onChildChange($event,parentCB)" [color]="child.color"
+      <mat-checkbox [value]="child.value" [checked]="child.checked" (change)="onChildChange($event,parentCB)" [color]="child.color"
         [disabled]="child.disabled" [labelPosition]="labelPosition" [ngClass]="{'label-before': labelPosition=='before'}">
         <span class="label">{{child.label}}</span>
         <ng-container *ngIf="child.description">

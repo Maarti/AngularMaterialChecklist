@@ -34,30 +34,30 @@ export class ChecklistComponent implements OnInit {
     }
   }
 
-  /** A parent is indeterminate if all of its children don't have the same "selected" value */
+  /** A parent is indeterminate if all of its children don't have the same "checked" value */
   public isIndeterminate(entry: ChecklistEntry): boolean {
     if (!entry.hasChildren()) {
       return false;
     }
-    const trueCount = this.countSelected(entry.children);
+    const trueCount = this.countChecked(entry.children);
     return (trueCount > 0 && trueCount < entry.children.length);
   }
 
-  /** For a parent, return true of all children are selected */
-  public isSelected(entry: ChecklistEntry): boolean {
+  /** For a parent, return true of all children are checked */
+  public isChecked(entry: ChecklistEntry): boolean {
     if (entry.hasChildren()) {
-      const trueCount = this.countSelected(entry.children);
+      const trueCount = this.countChecked(entry.children);
       return (trueCount >= entry.children.length);
     } else {
-      return entry.selected;
+      return entry.checked;
     }
   }
 
-  /** Count the number of selected entries in a list */
-  private countSelected(children: ChecklistEntry[]): number {
+  /** Count the number of checked entries in a list */
+  private countChecked(children: ChecklistEntry[]): number {
     let trueCount = 0;
     for (const child of children) {
-      if (child.selected) {
+      if (child.checked) {
         trueCount++;
       }
     }
@@ -74,7 +74,7 @@ export class ChecklistComponent implements OnInit {
 
   public onChildChange(change: MatCheckboxChange, parent: MatCheckbox): void {
     this._entries.find(list => list.value === parent.value).children.
-      find(entry => entry.value === change.source.value).selected = change.checked;
+      find(entry => entry.value === change.source.value).checked = change.checked;
     parent.checked = change.checked;
   }
 
@@ -82,9 +82,9 @@ export class ChecklistComponent implements OnInit {
   public onParentChange(change: MatCheckboxChange): void {
     const parent = this._entries.find(list => list.value === change.source.value);
     if (parent.hasChildren()) {
-      parent.children.forEach(child => { child.selected = (child.disabled) ? child.selected : change.checked; });
+      parent.children.forEach(child => { child.checked = (child.disabled) ? child.checked : change.checked; });
     } else {
-      parent.selected = change.checked;
+      parent.checked = change.checked;
     }
   }
 
