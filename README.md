@@ -55,6 +55,13 @@ public entries: ChecklistEntry[] = [
 ```
 For more examples, see the [live demo](https://maarti.github.io/AngularMaterialChecklist/checklist).
 
+## [Documentation](http://htmlpreview.github.io/?https://github.com/Maarti/AngularMaterialChecklist/blob/master/docs/index.html)
+### [ChecklistEntry](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Maarti/AngularMaterialChecklist/master/docs/classes/_lib_checklist_entry_.checklistentry.html)
+The principle entity to pass in parameter to a checklist.
+### [ChecklistComponent](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Maarti/AngularMaterialChecklist/master/docs/classes/_lib_checklist_component_.checklistcomponent.html)
+The main component. See getValue() method the get all the values of the checklist.
+
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
