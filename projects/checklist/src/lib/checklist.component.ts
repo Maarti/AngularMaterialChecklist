@@ -13,8 +13,14 @@ import { ChecklistEntry } from './checklist-entry';
 })
 export class ChecklistComponent implements OnInit {
 
+  /** List of entries populating the checklist. See ChecklistEntry documention for more information */
   @Input('entries') public initialEntries: ChecklistEntry[];
+  /** Set the labels before or after the checkboxes.
+   * Values are 'after' | 'before'.
+   * Default : 'after'
+   */
   @Input() public labelPosition: string = 'after';
+  /** Internal copy of entries. Use .getValue() function to get the values of the checklist. */
   public _entries: ChecklistEntry[] = new Array();
 
   public ngOnInit(): void {
