@@ -1,8 +1,8 @@
 # Angular Material Checklist
 
-`mat-checklist` brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
+`mat-checklist` is an [npm package](https://www.npmjs.com/package/@maarti/mat-checklist) that brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
 
-![Mat Checklist Demo](./docs/mat-checklist-demo.gif)
+![Mat Checklist Demo](https://raw.githubusercontent.com/Maarti/AngularMaterialChecklist/master/docs/mat-checklist-demo.gif)
 
 ## Getting started
 
@@ -65,10 +65,6 @@ The main component. See getValue() method the get all the values of the checklis
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Built With
 
