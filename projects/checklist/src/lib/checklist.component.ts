@@ -6,7 +6,7 @@ import { ChecklistEntry } from './checklist-entry';
 @Component({
   selector: 'mat-checklist',
   templateUrl: './checklist.component.html',
-  styleUrls: ['./checklist.component.css'],
+  styleUrls: ['./checklist.component.scss'],
   /** Providing this value to don't set indeterminate to false on check,
    *  because we take care of determining the indeterminate status. */
   providers: [{ provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check' }]
@@ -43,7 +43,9 @@ export class ChecklistComponent implements OnInit {
     return (trueCount > 0 && trueCount < entry.children.length);
   }
 
-  /** For a parent, return true of all children are checked */
+  /** @returns For a parent, returns true of all children are checked
+   * @returns For a child, returns its "checked" value
+   */
   public isChecked(entry: ChecklistEntry): boolean {
     if (entry.hasChildren()) {
       const trueCount = this.countChecked(entry.children);
@@ -53,7 +55,7 @@ export class ChecklistComponent implements OnInit {
     }
   }
 
-  /** Count the number of checked entries in a list */
+  /** @returns the number of checked entries in a list */
   private countChecked(children: ChecklistEntry[]): number {
     let trueCount = 0;
     for (const child of children) {
@@ -64,6 +66,7 @@ export class ChecklistComponent implements OnInit {
     return trueCount;
   }
 
+  /** @returns An object containing all the values of the checklist identified by their "value" attribute */
   public getValue(): any {
     let valueEntries = new Array();
     for (const entry of this._entries) {

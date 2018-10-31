@@ -1,15 +1,21 @@
 import { ThemePalette } from '@angular/material';
 
+/** Represents an entry of the ChecklistComponent */
 export class ChecklistEntry {
 
+    /** Identifier of the entry */
     public value: string;
+    /** Text that will be displayed in the checklist */
     public label?: string;
+    /** Text that will be displayed below the label */
     public description?: string;
-    /** The checked value of a parent with children will automatically be calculated from its children */
+    /** The starting value of the entry. The checked value of a parent with children will automatically be calculated from its children. */
     public checked?: boolean = false;
-    /** Only a parent entry can have children */
+    /** List of nested entries. Only a parent entry can have children. */
     public children?: ChecklistEntry[];
+    /** Set to true to disable the entry. */
     public disabled?: boolean = false;
+    /** Color of a Theme Palette, see Angular Material documentation for more information. */
     public color?: ThemePalette = 'primary';
 
     constructor(
@@ -30,6 +36,9 @@ export class ChecklistEntry {
         this.color = color;
     }
 
+    /** Checkentry initializer
+     * @returns Returns the ChecklistEntry itself
+     */
     public static init(obj: {
         value: string,
         label?: string,
@@ -47,10 +56,13 @@ export class ChecklistEntry {
         return Object.assign(entry, obj);
     }
 
+    /** @returns true if this entry has children */
     public hasChildren(): boolean {
         return (this.children && this.children !== []);
     }
 
+    /**  @returns Return the value of the entry and its children.
+     */
     public getValue(): any {
         const valueEntry = new Array();
         if (!this.hasChildren()) {
@@ -65,6 +77,11 @@ export class ChecklistEntry {
         return valueEntry;
     }
 
+    /**  Set a property on this ChecklistEntry
+     * @param property Name of the property to set
+     * @param value Value to set to the property
+     * @returns Returns the ChecklistEntry itself to allow .set() chaining
+    */
     public set(property: keyof ChecklistEntry, value: any): ChecklistEntry {
         this[property] = value;
         return this;
