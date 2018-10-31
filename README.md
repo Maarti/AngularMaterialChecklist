@@ -1,6 +1,6 @@
 # Angular Material Checklist
 
-`mat-checklist` is an [npm package](https://www.npmjs.com/package/@maarti/mat-checklist) that brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
+`mat-checklist` is a [npm package](https://www.npmjs.com/package/@maarti/mat-checklist) that brings together several checkboxes from `@angular/material` to make a checklist. This also allows checkboxes nesting:
 
 ![Mat Checklist Demo](https://raw.githubusercontent.com/Maarti/AngularMaterialChecklist/master/docs/mat-checklist-demo.gif)
 
